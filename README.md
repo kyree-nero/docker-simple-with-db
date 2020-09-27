@@ -3,15 +3,16 @@ hosted by an alpine linux distribution
 
 <h3>How to run it</h3>
 To run it from docker...  
-1. Change your working directory to the projects root directory  
-1. Run    docker build -t docker-simple-db -f docker/Dockerfile.db .
-1. Run    docker run 
+
+	1. Change your working directory to the projects root directory  
+	2. Run    docker build -t docker-simple-db -f docker/Dockerfile.db .
+	3. Run    docker run 
 			--name=docker-simple-db  
 			--publish=3306:3306  
 			docker-simple-db:latest   
-1. Do a clean install from maven  
-1. Run    docker build -t docker-simple-app-with-db -f docker/Dockerfile.app .   
-1. Run    docker run 
+	4. Do a clean install from maven  
+	5. Run    docker build -t docker-simple-app-with-db -f docker/Dockerfile.app .   
+	6. Run    docker run 
 			--name=docker-simple-app-with-db  
 			--publish=8080:8080  
 			--link  docker-simple-db:db  
