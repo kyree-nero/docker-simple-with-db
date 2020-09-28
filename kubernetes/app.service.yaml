@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-simple-app-with-db-service 
+spec:
+  selector:
+    app: docker-simple-app-with-db
+  ports:
+    - port: 8080
+      targetPort: 8080
+  externalTrafficPolicy: Local
+  type: LoadBalancer
+  
